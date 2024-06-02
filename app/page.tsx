@@ -1,8 +1,11 @@
+import { Hero } from "@/components"
 
 
 const page = () => {
   return (
-    <div>page</div>
+    <main className="overflow-hidden">
+      <Hero />
+    </main>
   )
 }
 
