@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div className="flex w-screen h-screen items-center justify-between">
       <div className="flex-1 pt-26 padding-x">
-        <h1 className="2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold">
+        <h1 className="2xl:text-[62px] sm:text-[54px] text-[50px] font-extrabold">
           Find, book, or rent a car - quickly and easily!
         </h1>
         <p className="text-[27px] text-black-100 font-light mt-5">
@@ -24,17 +24,17 @@ const Hero = () => {
         />
       </div>
       {/* hero image */}
-      <div className="hero__container">
-        <div className="relative">
+      <div className="hero__image-container">
+        <div className="hero__image">
           <Image
             src="/hero.png"
             alt="hero image"
-            width={700}
-            height={700}
+            width={500}
+            height={500}
             className="object-contain w-full h-full"
           />
-          <div className="absolute xl:-top-64 xl:-right-1/3 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden"/>
         </div>
+          <div className="hero__image-overlay"/>
       </div>
     </div>
   )
