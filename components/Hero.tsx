@@ -9,12 +9,12 @@ const Hero = () => {
   } 
 
   return (
-    <div className="flex w-screen h-screen items-center justify-between">
-      <div className="flex-1 pt-26 padding-x">
-        <h1 className="2xl:text-[62px] sm:text-[54px] text-[50px] font-extrabold">
+    <div className="hero">
+      <div className="flex-1 pt-36 padding-x">
+        <h1 className="hero__title">
           Find, book, or rent a car - quickly and easily!
         </h1>
-        <p className="text-[27px] text-black-100 font-light mt-5">
+        <p className="hero__subtitle">
           Streamline your car rental experience with our effortless booking process.
         </p>
         <Button
@@ -28,13 +28,12 @@ const Hero = () => {
         <div className="hero__image">
           <Image
             src="/hero.png"
-            alt="hero image"
-            width={500}
-            height={500}
-            className="object-contain w-full h-full"
+            alt="hero"
+            fill
+            className="object-contain"
           />
         </div>
-          <div className="hero__image-overlay"/>
+        <div className="hero__image-overlay"/>
       </div>
     </div>
   )
