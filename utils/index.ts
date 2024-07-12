@@ -1,19 +1,6 @@
-interface Car {
-    city_mpg:number;
-    class:string;
-    combination_mpg: number;
-    cylinders:number;
-    displacement:number;
-    drive:string;
-    fuel_type:string;
-    highway_mpg:number;
-    make:string;
-    model:string;
-    transmission:string;
-    year:number;
-}
+import { carProps } from "@/types";
   
-export async function fetchCars(): Promise<Car[]> {
+export async function fetchCars(): Promise<carProps[]> {
     const headers = {
         'x-rapidapi-key': process.env.NEXT_RAPID_API_KEY as string,
 		'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'
@@ -23,7 +10,7 @@ export async function fetchCars(): Promise<Car[]> {
         headers
     });
 
-    const result: Car[] = await response.json();
+    const result: carProps[] = await response.json();
     return result
 }
 
@@ -40,4 +27,8 @@ export const calculateCarRent = (city_mpg: number, year:number) => {
     const rentalPerDay = basePricePerDay + mileageRate + ageRate;
 
     return rentalPerDay.toFixed(0);
+}
+
+export const generateCarImageUrl = (car: carProps, angle?:string) => {
+
 }
