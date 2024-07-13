@@ -3,6 +3,7 @@ import { cardDetailsProps } from "@/types"
 import Image from "next/image"
 import { Fragment } from "react"
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react"
+import { generateCarImageUrl } from "@/utils"
 
 const CardDetails = ({ isOpen, closeModal, car }: cardDetailsProps) => {
   return (
@@ -60,7 +61,7 @@ const CardDetails = ({ isOpen, closeModal, car }: cardDetailsProps) => {
                   <div className="flex flex-col flex-1 gap-3 p-3">
                     <div className="relative w-full h-40 bg-center bg-cover rounded-lg bg-pattern">
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car)}
                         alt="car model"
                         fill
                         priority
@@ -71,7 +72,7 @@ const CardDetails = ({ isOpen, closeModal, car }: cardDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="relative flex-1 w-full h-24 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '23')}
                           alt="car model"
                           fill
                           priority
@@ -80,7 +81,7 @@ const CardDetails = ({ isOpen, closeModal, car }: cardDetailsProps) => {
                       </div>
                       <div className="relative flex-1 w-full h-24 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '33')}
                           alt="car model"
                           fill
                           priority
@@ -89,7 +90,7 @@ const CardDetails = ({ isOpen, closeModal, car }: cardDetailsProps) => {
                       </div>
                       <div className="relative flex-1 w-full h-24 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '13')}
                           alt="car model"
                           fill
                           priority

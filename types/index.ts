@@ -28,6 +28,7 @@ export interface carProps {
     model: string;
     transmission: string;
     year: number;
+    message?: string;
 }
 
 export interface cardDetailsProps {
